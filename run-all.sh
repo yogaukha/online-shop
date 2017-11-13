@@ -1,0 +1,1 @@
+./cart-api/run.sh & ./coupon-api/run.sh & ./order-api/run.sh & ./product-api/run.sh & ./user-api/run.sh

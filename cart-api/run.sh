@@ -19,5 +19,9 @@ sudo cp ./composer.phar $folder
 
 #run composer install
 php $folder"composer.phar" install -d $folder
+
+#run migrate
+php artisan migrate
+
 #run service host on specific port, for cart use port 3133
 php -S localhost:3133 -t $folder"public"

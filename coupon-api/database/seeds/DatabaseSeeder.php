@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,6 +13,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call('UsersTableSeeder');
-        factory(App\User::class, 50)->create();
+        $coupon = app()->make('App\Coupon');
+        $coupon->fill([
+            'code_name' => 'HARBOLNAS11',
+            'desc' => 'Potongan 11000 langsung tanpa syarat',
+            'qty' => 100,
+            'valid_start' => '2017-11-14',
+            'valid_till' => '2017-11-30',
+            'discount' => 11000,
+        ]);
+        $coupon->save();
     }
 }

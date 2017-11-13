@@ -19,5 +19,9 @@ sudo cp ./composer.phar $folder
 
 #run composer install
 php $folder"composer.phar" install -d $folder
+
+#run migrate
+php artisan migrate:refresh
+
 #run service host on specific port, for order use port 3135
 php -S localhost:3135 -t $folder"public"

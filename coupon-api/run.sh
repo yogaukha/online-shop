@@ -19,5 +19,9 @@ sudo cp ./composer.phar $folder
 
 #run composer install
 php $folder"composer.phar" install -d $folder
+
+#run migrate
+php artisan migrate:refresh --seed
+
 #run service host on specific port, for coupon use port 3134
 php -S localhost:3134 -t $folder"public"

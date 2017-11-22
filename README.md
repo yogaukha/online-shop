@@ -46,7 +46,7 @@ You can run this API with Postman Application.
 2. Register
 - Method: POST
 - Parameter: {name}, {email}, {password}, {role}. All parameters are required.
-- URI: ```reg```
+- URI: ```register```
 3. Login
 - Method: POST
 - Parameter: {email}, {password}
